@@ -4,7 +4,7 @@ import {
   getUserTitles
 } from "psn-api";
 
-import { NPSSO } from "$env/static/private";
+const NPSSO = "Tp6exLOwxY9D0A6LRyBBi3bp6tJk9HI3B0vubIyKf72iGQ2A7PQk5OcwFNevuTKH"
 
 export async function load() {
   try {
