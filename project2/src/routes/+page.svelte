@@ -49,7 +49,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('\src\lib\assets\IMG_5726.JPG');
+    background-image: url('/src/lib/assets/IMG_5726.jpg');
     background-size: cover;
     height: 93.6vh;
 }

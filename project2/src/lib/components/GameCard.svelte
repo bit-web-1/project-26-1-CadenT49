@@ -2,8 +2,7 @@
     let { game } = $props();
 </script>
 
-<a href="/game/{game.npCommunicationId}">
-<div class="card">
+<a class="card" href={`/game/${game.npCommunicationId}`}>
     <img
         src={game.trophyTitleIconUrl}
         alt={game.trophyTitleName}
@@ -12,17 +11,19 @@
 
     <h3>{game.trophyTitleName}</h3>
     <p>{game.trophyTitlePlatform}</p>
-</div>
 </a>
 
 <style>
     .card {
+        display: block;
         background: white;
         border-radius: 12px;
         padding: 12px;
         text-align: center;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s ease;
+        text-decoration: none;
+        color: black;
     }
 
     .card:hover {
@@ -44,9 +45,5 @@
     p {
         margin: 0;
         color: #666;
-    }
-    a{
-        text-decoration: none;
-        color: black;
     }
 </style>
