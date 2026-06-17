@@ -1,19 +1,20 @@
 <script>
-    let { game } = $props();
+    let { trophy } = $props();
 </script>
 
-<a href="/game/{game.npCommunicationId}">
-<div class="card">
+<div class:earned={trophy.earned} class="card">
+    <p class="rarity">{trophy.trophyType}</p>
+
     <img
-        src={game.trophyTitleIconUrl}
-        alt={game.trophyTitleName}
+        src={trophy.trophyIconUrl}
+        alt={trophy.trophyName}
         class="game-image"
     />
 
-    <h3>{game.trophyTitleName}</h3>
-    <p>{game.trophyTitlePlatform}</p>
+    <h3>{trophy.trophyName}</h3>
+    <p>{trophy.trophyDetail}</p>
+    <small>Earn Rate: {trophy.trophyEarnedRate}%</small>
 </div>
-</a>
 
 <style>
     .card {
@@ -25,15 +26,24 @@
         transition: transform 0.2s ease;
     }
 
+    .card.earned {
+        background: #d4f8d4;
+        border: 2px solid #36b336;
+    }
+
     .card:hover {
         transform: translateY(-2px);
     }
 
     .game-image {
-        width: 100%;
-        aspect-ratio: 1;
+        max-width: 100px;
         object-fit: cover;
         border-radius: 8px;
+    }
+
+    .rarity {
+        margin-bottom: 5px;
+        text-transform: capitalize;
     }
 
     h3 {
@@ -44,9 +54,5 @@
     p {
         margin: 0;
         color: #666;
-    }
-    a{
-        text-decoration: none;
-        color: black;
     }
 </style>

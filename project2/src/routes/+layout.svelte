@@ -1,5 +1,6 @@
 <script>
 	import favicon from '$lib/assets/favicon.svg';
+	import Footer from '$lib/components/Footer.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import '$lib/global.css';
 
@@ -16,7 +17,7 @@
 {@render children()}
 </main>
 
-
+<Footer/>
 
 <style>
 *{
