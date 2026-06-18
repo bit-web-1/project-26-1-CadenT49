@@ -47,12 +47,10 @@
         text-align: center;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s ease;
-
         display: flex;
         flex-direction: column;
         height: 100%;
         box-sizing: border-box;
-
         text-decoration: none;
         color: black;
     }
@@ -83,18 +81,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 12px;
-
+        gap: 0.1em;
         margin-top: auto;
-        padding-top: 10px;
+        padding-top: .5em;
     }
 
     .trophy-count {
         display: flex;
         align-items: center;
-        gap: 4px;
+        gap: 0.15em;
         font-weight: bold;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .trophy-count img {
