@@ -1,39 +1,143 @@
-<div class="img-center">
-<img src="src\lib\assets\IMG_5727.JPG" alt="">
-<img src="src\lib\assets\IMG_5741.JPG" alt="">
-</div>
+<section class="about-page">
+    <div class="about-card">
+        <div class="about-text">
+            <p class="small-title">About Me</p>
 
-<div class="text-card">
-<p>I’ve been building my PlayStation trophy collection over the past 10 years, playing through a wide range of games and slowly working towards harder completions. Trophy hunting has become one of my favourite parts of gaming because it gives me a reason to fully explore each game, complete extra challenges, and push for 100% completion. My collection includes everything from story-driven games to difficult platinum trophies, showing the time and effort I’ve put into gaming over the years.
-</p>
-</div>
+            <h1>PlayStation Trophy Hunter</h1>
+
+            <p>
+                I’ve been building my PlayStation trophy collection for over 10 years,
+                playing through story games, open-world adventures, difficult challenges,
+                and full 100% completions.
+            </p>
+
+            <p>
+                Trophy hunting has become one of my favourite parts of gaming because it
+                gives every game more purpose. I enjoy exploring everything a game has to
+                offer, finishing extra challenges, and working towards platinum trophies.
+            </p>
+
+            <div class="stats">
+                <div>
+                    <h2>10+</h2>
+                    <p>Years</p>
+                </div>
+
+                <div>
+                    <h2>100%</h2>
+                    <p>Completion</p>
+                </div>
+
+                <div>
+                    <h2>PSN</h2>
+                    <p>Trophies</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-images">
+            <img src="src/lib/assets/IMG_5727.jpg" alt="Game screenshot">
+            <img src="src/lib/assets/IMG_5741.jpg" alt="Game screenshot">
+        </div>
+    </div>
+</section>
 
 <style>
-    .img-center{
+    .about-page {
+        height: calc(100vh - 115px);
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 5em;
-        margin-top: 10%;
+        padding: 20px 40px;
+        box-sizing: border-box;
     }
-    .text-card{
-        display: flex;
-        justify-content: center;
 
-    }
-    img{
-        max-width: 30%;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    p{
-        margin-top: 10%;
-        text-align: center;
+    .about-card {
+        width: 100%;
+        max-width: 1100px;
+        height: 100%;
+        max-height: 620px;
         background: white;
-        border-radius: 12px;
-        padding: 12px;
-        text-align: center;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s ease;
-        max-width: 40%;
+        border-radius: 24px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+        padding: 35px;
+        box-sizing: border-box;
+        overflow: hidden;
     }
+
+    .about-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .small-title {
+        color: #2679bd;
+        font-weight: bold;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+        margin: 0 0 18px;
+        color: #1f2937;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+        line-height: 1.5;
+        color: #444;
+        margin-bottom: 14px;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 20px;
+    }
+
+    .stats div {
+        background: #f0f6ff;
+        border-radius: 16px;
+        padding: 14px;
+        text-align: center;
+    }
+
+    .stats h2 {
+        margin: 0;
+        color: #2679bd;
+        font-size: 1.7rem;
+    }
+
+    .stats p {
+        margin: 4px 0 0;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+    .about-images {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .about-images img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 18px;
+    }
+    .about-images img:last-child {
+    border-radius: 18px;
+    overflow: hidden;
+    display: block;
+}
 </style>
