@@ -4,7 +4,7 @@
     const earned = game.earnedTrophies ?? {};
 </script>
 
-<div class="card">
+<a class="card" href={`/game/${game.npCommunicationId}`}>
     {#if game.trophyTitleIconUrl}
         <img
             src={game.trophyTitleIconUrl}
@@ -37,21 +37,25 @@
             <span>{earned.bronze ?? 0}</span>
         </div>
     </div>
-</div>
+</a>
 
 <style>
     .card {
-    background: white;
-    border-radius: 12px;
-    padding: 12px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    box-sizing: border-box;
-}
+        background: white;
+        border-radius: 12px;
+        padding: 12px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        box-sizing: border-box;
+
+        text-decoration: none;
+        color: black;
+    }
 
     .card:hover {
         transform: translateY(-2px);
@@ -76,13 +80,14 @@
     }
 
     .trophy-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    margin-top: auto;
-    padding-top: 10px;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+
+        margin-top: auto;
+        padding-top: 10px;
+    }
 
     .trophy-count {
         display: flex;
