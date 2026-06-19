@@ -1,9 +1,7 @@
 <section class="about-page">
     <div class="about-card">
         <div class="about-text">
-            <p class="small-title">About Me</p>
-
-            <h1>PlayStation Trophy Hunter</h1>
+            <h1>About Me</h1>
 
             <p>
                 I’ve been building my PlayStation trophy collection for over 10 years,
@@ -17,22 +15,6 @@
                 offer, finishing extra challenges, and working towards platinum trophies.
             </p>
 
-            <div class="stats">
-                <div>
-                    <h2>10+</h2>
-                    <p>Years</p>
-                </div>
-
-                <div>
-                    <h2>100%</h2>
-                    <p>Completion</p>
-                </div>
-
-                <div>
-                    <h2>PSN</h2>
-                    <p>Trophies</p>
-                </div>
-            </div>
         </div>
 
         <div class="about-images">
@@ -74,14 +56,6 @@
         justify-content: center;
     }
 
-    .small-title {
-        color: #2679bd;
-        font-weight: bold;
-        margin-bottom: 8px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
     h1 {
         font-size: 2.6rem;
         margin: 0 0 18px;
@@ -93,32 +67,6 @@
         line-height: 1.5;
         color: #444;
         margin-bottom: 14px;
-    }
-
-    .stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 14px;
-        margin-top: 20px;
-    }
-
-    .stats div {
-        background: #f0f6ff;
-        border-radius: 16px;
-        padding: 14px;
-        text-align: center;
-    }
-
-    .stats h2 {
-        margin: 0;
-        color: #2679bd;
-        font-size: 1.7rem;
-    }
-
-    .stats p {
-        margin: 4px 0 0;
-        font-size: 0.9rem;
-        color: #555;
     }
 
     .about-images {

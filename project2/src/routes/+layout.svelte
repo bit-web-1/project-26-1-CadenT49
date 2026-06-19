@@ -1,26 +1,10 @@
 <script>
-    import { onMount } from 'svelte';
-
     import favicon from '$lib/assets/favicon.svg';
     import Footer from '$lib/components/Footer.svelte';
     import Nav from '$lib/components/Nav.svelte';
     import '$lib/global.css';
 
     let { children } = $props();
-
-    let darkMode = $state(false);
-
-    onMount(() => {
-        darkMode = localStorage.getItem('theme') === 'dark';
-        document.body.classList.toggle('dark-mode', darkMode);
-    });
-
-    function toggleTheme() {
-        darkMode = !darkMode;
-
-        document.body.classList.toggle('dark-mode', darkMode);
-        localStorage.setItem('theme', darkMode ? 'dark' : 'light');
-    }
 </script>
 
 <svelte:head>
@@ -35,9 +19,7 @@
 
 <Nav />
 
-<button class="theme-toggle" onclick={toggleTheme}>
-    {darkMode ? 'Light Mode' : 'Dark Mode'}
-</button>
+
 
 <main>
     {@render children()}
@@ -47,7 +29,7 @@
 
 <style>
     :global(*) {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Inter';
     }
 
     :global(body) {
@@ -63,29 +45,5 @@
 
     main {
         min-height: calc(100vh - 140px);
-    }
-
-    .theme-toggle {
-        position: fixed;
-        top: 0.75em;
-        right: 20px;
-        z-index: 1000;
-        border: none;
-        background: white;
-        color: #2679bd;
-        padding: 8px 14px;
-        border-radius: 999px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    .theme-toggle:hover {
-        transform: translateY(-1px);
-    }
-
-    :global(body.dark-mode) .theme-toggle {
-        background: #334155;
-        color: white;
     }
 </style>
